@@ -40,5 +40,15 @@ $(document).ready( () => {
             $("#future_value").val(calculateFutureValue(investment, rate, years));
         }
     });
+    $("#clear").click( () =>{
+        $(":text").val("");
+        $(":text").next().text("*")
+        $("#investment").focus();
+    });
+
+    $(":text").dblclick( () => {
+        $("#clear").click();
+    });
+
     $("#investment").focus();
 });
